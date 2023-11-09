@@ -109,7 +109,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    BASE_DIR / 'myapp/static',
+    BASE_DIR / 'codelabs0/myapp/static',
     # Add more directories here if you have additional static files
 ]
 
