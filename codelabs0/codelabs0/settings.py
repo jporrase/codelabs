@@ -19,7 +19,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-!1lewvh!dq%-vn!tlffmv3h5s_y7lc%-vi+d6&tpx7sc3f_iv3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -108,8 +108,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
 STATICFILES_DIRS = [
-    BASE_DIR / 'codelabs0/myapp/static',
+    BASE_DIR / 'myapp/static',
     # Add more directories here if you have additional static files
 ]
 
