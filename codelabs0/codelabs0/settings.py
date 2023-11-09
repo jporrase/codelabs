@@ -108,13 +108,14 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+# This should be a path to a directory where `manage.py collectstatic` will
+# collect static files to. This should be an absolute filesystem path.
+STATIC_ROOT = BASE_DIR / 'staticfiles'  # This directory should be created.
 
-STATICFILES_DIRS = [
-    BASE_DIR / '/workspace/codelabs0/myapp/static',
-    # Add more directories here if you have additional static files
-]
-
+# STATICFILES_DIRS is a list of filesystem directories to check when loading
+# static files. It is a good idea to keep this empty if you're not storing
+# static files outside of your apps.
+STATICFILES_DIRS = ['/workspace/codelabs0/myapp/static'] 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
